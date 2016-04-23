@@ -4,7 +4,7 @@
    },
    "content_scripts": [ {
       "all_frames": true,
-      "js": [ "lib/ga/ga.js", "tswizzlify/tswizzlify.js" ],
+      "js": [ "tswizzlify/tswizzlify.js" ],
       "matches": [ "http://*/*", "https://*/*" ],
       "run_at": "document_start"
    } ],
@@ -24,6 +24,7 @@
    },
    "permissions": [ "storage", "tabs", "contextMenus", "webRequest", "\u003Call_urls>", "http://*/*", "https://*/*", "webNavigation", "webRequestBlocking", "cookies", "storage", "unlimitedStorage" ],
    "short_name": "__MSG_appName__",
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
    "update_url": "https://clients2.google.com/service/update2/crx",
    "version": "1.0"
 }

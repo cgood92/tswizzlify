@@ -8,26 +8,22 @@ try {
         if (active) {
             run();
         }
-        //track(items.activate ? "true" : "false");
     });
 } catch (e) {
     if (active) {
         run();
     }
-    //track("undefined");
 }
-
-function track(active) {
-    //Analytics
-    var _gaq = window._gaq || [];
-    _gaq.push(['_setAccount', 'UA-43973753-3']);
-    _gaq.push(['_gat._forceSSL']);
-    _gaq.push(["_setCustomVar", 1, "Active", active, 3]);
-    _gaq.push(['_trackPageview']);
-}
-
-//Content script, image replacer
 function run() {
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-76830237-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = 'https://ssl.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
     (function () {
         var t_self = {
             tswizzlifyImgs: [
