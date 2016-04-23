@@ -1,0 +1,38 @@
+{
+   "appDesc": {
+      "description": "The description of the application, displayed in the web store.",
+      "message": "Replaces all images on all pages to Nicolas Cage."
+   },
+   "appName": {
+      "description": "The title of the application, displayed in the web store.",
+      "message": "tswizzlify"
+   },
+   "contextMenuActivate": {
+      "description": "The option in context menu to activate the extension",
+      "message": "tswizzlify Activate"
+   },
+   "contextMenuInactivate": {
+      "description": "The option in context menu to inactivate the extension",
+      "message": "tswizzlify Inactivate"
+   },
+   "openOptionsInfo": {
+      "description": "The option in context menu to activate the extension",
+      "message": "Open options again by using right-click or by clicking tswizzlify 'Options' under "
+   },
+   "optionsHeader": {
+      "description": "Title of Options page",
+      "message": "tswizzlify Options"
+   },
+   "optionsPageActivate": {
+      "description": "Text shown next to On/Off-button",
+      "message": "tswizzlify is"
+   },
+   "optionsPageContextLink": {
+      "description": "Text shown next to On/Off-button",
+      "message": "Show \"tswizzlify Inactivate\" on right-click"
+   },
+   "optionsPageContextLinkActivate": {
+      "description": "Text shown next to On/Off-button",
+      "message": "Show \"tswizzlify Activate\" on right-click"
+   }
+}
