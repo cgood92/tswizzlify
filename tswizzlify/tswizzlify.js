@@ -97,7 +97,7 @@ function run() {
                 }
             }
         };
-        t_self.handleImages(t_self.shuffle(t_self.tswizzlifyImgs), 3000);
+        t_self.handleImages(t_self.shuffle(t_self.tswizzlifyImgs), 1000);
         document.tswizzlify = t_self;
     })();
 }
