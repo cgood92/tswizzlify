@@ -4,7 +4,7 @@
    },
    "content_scripts": [ {
       "all_frames": true,
-      "js": [ "lib/jq/jquery-2.1.1.min.js", "lib/ga/ga.js", "tswizzlify/tswizzlify.js" ],
+      "js": [ "lib/ga/ga.js", "tswizzlify/tswizzlify.js" ],
       "matches": [ "http://*/*", "https://*/*" ],
       "run_at": "document_start"
    } ],
