@@ -69,9 +69,9 @@
         setStatus: function (active) {
             var url;
             if (active) {
-                url = chrome.extension.getURL('tswizzlify/options/on.jpg');
+                url = chrome.extension.getURL('tswizzlify/options/tswift-on.jpg');
             } else {
-                url = chrome.extension.getURL('tswizzlify/options/off.jpg');
+                url = chrome.extension.getURL('tswizzlify/options/tswift-off.jpg');
             }
 
             document.getElementById('imgStatus').src = url;

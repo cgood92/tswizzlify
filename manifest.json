@@ -25,5 +25,5 @@
    "permissions": [ "storage", "tabs", "contextMenus", "webRequest", "\u003Call_urls>", "http://*/*", "https://*/*", "webNavigation", "webRequestBlocking", "cookies", "storage", "unlimitedStorage" ],
    "short_name": "__MSG_appName__",
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "1.85"
+   "version": "1.0"
 }
