@@ -1,7 +1,7 @@
 ﻿//tswizzlify background script
 (function() {
 
-    var self = {
+    var t_self = {
         //Get saved setting and initialize GUI items
         init: function() {
             chrome.storage.sync.get({
@@ -9,68 +9,31 @@
                 contextmenu: true,
                 contextmenuActivate: true
             }, function (items) {
-                self.updateContextMenu(items);
             });
-
-            chrome.runtime.onInstalled.addListener(self.onInstalled);
-            chrome.runtime.onMessage.addListener(self.onMessageReceived);
+            chrome.runtime.onInstalled.addListener(t_self.onInstalled);
+            chrome.runtime.onMessage.addListener(t_self.onMessageReceived);
         },
 
         //On first install
         onInstalled: function (details) {
             if (details.reason == "install") {
-                self.openOptions();
+                t_self.openOptions();
             }
         },
 
         //On message received
         onMessageReceived: function(message, sender, sendResponse) {
-
-            //Option page saved
-            if (message.type == "options") {
-                self.updateContextMenu(message.items);
-            }
-            else if (message.type == "extensions") {
-                self.openExtensions();
+            if (message.type == "extensions") {
+                t_self.openExtensions();
             }
             if(typeof (sendResponse) == "function")
                 sendResponse();
         },
-
-        //Update GUI
-        updateContextMenu: function (items) {
-
-            chrome.contextMenus.remove("tswizzlifyInactivate");
-            chrome.contextMenus.remove("tswizzlifyInactivate");
-
-            if (items.contextmenu && items.activate) {
-                chrome.contextMenus.create({
-                    "id": "tswizzlifyInactivate",
-                    "title": chrome.i18n.getMessage("contextMenuInactivate"),
-                    "contexts": ["page"],
-                    "onclick": function(e) {
-                        self.openOptions();
-                    }
-                });
-            } else if (items.contextmenuActivate && !items.activate) {
-                chrome.contextMenus.create({
-                    "id": "tswizzlifyInactivate",
-                    "title": chrome.i18n.getMessage("contextMenuActivate"),
-                    "contexts": ["page"],
-                    "onclick": function (e) {
-                        self.openOptions();
-                    }
-                });
-            } 
-        },
-
         //Opens the options tab
         openOptions:function(){
             var optionsUrl = chrome.extension.getURL('tswizzlify/options/options.html');
-            self.openUrl(optionsUrl);
-            
+            t_self.openUrl(optionsUrl);
         },
-
         openUrl: function(url) {
             chrome.tabs.query({ url: url }, function (tabs) {
                 if (tabs.length) {
@@ -82,7 +45,5 @@
             });
         }
     };
-
-    self.init();
-
+    t_self.init();
 })();
