@@ -6,18 +6,12 @@
             //Header
             document.title = chrome.i18n.getMessage("optionsHeader");
 
-            //Lang
-            var langs = ["optionsPageActivate", "optionsPageContextLink", "optionsPageContextLinkActivate"];
-            for (var i = 0; i < langs.length; i++) {
-                var message = chrome.i18n.getMessage(langs[i]);
-                document.getElementById(langs[i]).textContent = message;
-            }
+            var message = chrome.i18n.getMessage('optionsPageActivate');
+            document.getElementById('optionsPageActivate').textContent = message;
 
             //Options
             self.restoreOptions();
             document.getElementById('chkActivate').addEventListener('change', self.saveOptions);
-            document.getElementById('chkUseContextMenu').addEventListener('change', self.saveOptions);
-            document.getElementById('chkUseContextMenuActivate').addEventListener('change', self.saveOptions);
             
             //Options info ([LINK] not in use)
             var optionsInfo = chrome.i18n.getMessage("openOptionsInfo").replace("[LINK]", "chrome://extensions/");
@@ -34,12 +28,8 @@
         //Save to storage
         saveOptions: function() {
             var activate = document.getElementById('chkActivate').checked;
-            var contextmenu = document.getElementById('chkUseContextMenu').checked;
-            var contextmenuActivate = document.getElementById('chkUseContextMenuActivate').checked;
             var items = {
-                activate: activate,
-                contextmenu: contextmenu,
-                contextmenuActivate: contextmenuActivate
+                activate: activate
             };
             chrome.storage.sync.set(items, function () {
                 self.setStatus(activate);
@@ -55,13 +45,9 @@
         //Load from storage
         restoreOptions: function() {
             chrome.storage.sync.get({
-                activate: true,
-                contextmenu: true,
-                contextmenuActivate: true
+                activate: true
             }, function (items) {
                 document.getElementById('chkActivate').checked = items.activate;
-                document.getElementById('chkUseContextMenu').checked = items.contextmenu;
-                document.getElementById('chkUseContextMenuActivate').checked = items.contextmenuActivate;
                 self.setStatus(items.activate);
             });
         },
@@ -73,8 +59,8 @@
             } else {
                 url = chrome.extension.getURL('tswizzlify/options/tswift-off.jpg');
             }
-
-            document.getElementById('imgStatus').src = url;
+            console.log('Setting status', url);
+           document.getElementById('imgStatus').src = url;
         },
         //Open extensions page (not working, not in use)
         linkExtensions: function() {

@@ -1,38 +1,30 @@
 {
    "appDesc": {
       "description": "The description of the application, displayed in the web store.",
-      "message": "Replaces all images on all pages to Nicolas Cage."
+      "message": "Know someone who CAN get enough of Taylor Swift? Well... this might be a fun plugin to anonymously install."
    },
    "appName": {
       "description": "The title of the application, displayed in the web store.",
-      "message": "tswizzlify"
+      "message": "Tswizzlify"
    },
    "contextMenuActivate": {
       "description": "The option in context menu to activate the extension",
-      "message": "tswizzlify Activate"
+      "message": "Tswizzlify Activate"
    },
    "contextMenuInactivate": {
       "description": "The option in context menu to inactivate the extension",
-      "message": "tswizzlify Inactivate"
+      "message": "Tswizzlify Inactivate"
    },
    "openOptionsInfo": {
       "description": "The option in context menu to activate the extension",
-      "message": "Open options again by using right-click or by clicking tswizzlify 'Options' under "
+      "message": "Open options again by clicking tswizzlify 'Options' under "
    },
    "optionsHeader": {
       "description": "Title of Options page",
-      "message": "tswizzlify Options"
+      "message": "Tswizzlify Options"
    },
    "optionsPageActivate": {
       "description": "Text shown next to On/Off-button",
-      "message": "tswizzlify is"
-   },
-   "optionsPageContextLink": {
-      "description": "Text shown next to On/Off-button",
-      "message": "Show \"tswizzlify Inactivate\" on right-click"
-   },
-   "optionsPageContextLinkActivate": {
-      "description": "Text shown next to On/Off-button",
-      "message": "Show \"tswizzlify Activate\" on right-click"
+      "message": "Tswizzlify is"
    }
 }
