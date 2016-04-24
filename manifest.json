@@ -14,7 +14,6 @@
       "128": "tswizzlify/logo128.png",
       "16": "tswizzlify/logo16.png"
    },
-   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC1iwFVxMHNfJyY96fpu20zSiEHQ+Ff2Wb6iMOXAFYcENodOjQ4gifWZnrCRHEG7cSofdlPhu9kFFNxV8fd4TJuetbmIyM7UxhqfbIMghh1EyNYNltesq7cCUnNdTLQ3gFAtGHBEcSZ/m0zB59241Bv52byaABzbuom6S3aSNmYZwIDAQAB",
    "manifest_version": 2,
    "name": "__MSG_appName__",
    "options_page": "tswizzlify/options/options.html",
